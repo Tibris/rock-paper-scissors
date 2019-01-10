@@ -1,0 +1,179 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    font-family: 'Roboto Condensed', sans-serif;
+    background-color: #1A1A1D;
+    color: floralwhite;
+}
+
+header {
+    width: 100%;
+    background-color: #C3073F;
+    color: black;
+    height: 60px;
+    text-align: center;
+    font-size: 2.8em;
+    border-bottom: solid 1px #4e4e50;
+    text-shadow: 1px 1px 3px black;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+#instructions {
+    width: 100%;
+    text-align: center;
+}
+
+#instructions > p {
+    margin-top: 40px;
+    font-size: 2em;
+    color: white;
+    text-shadow: 1px 1px 4px black;
+}
+
+#start {
+    font-size: 30px;
+    color: red;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+
+#options {
+    width: 68%;
+    margin: auto;
+    overflow: hidden;
+}
+
+.option {
+    width: 26%;
+    float: left;
+    margin: 55px 3.66666%;
+    cursor: pointer;
+}
+
+.option img {
+    position: relative;
+    width: 100%;
+    border-radius: 50%;
+    border: solid 5px black;
+    background-color: rgb(201, 46, 46);
+    background-clip: content-box;
+}
+
+@keyframes floating {
+    0% {
+        top: 0px;
+    }
+
+    33.33% {
+        top: 10px;
+    }
+
+    66.66% {
+        top: -10px;
+    }
+
+    100% {
+        top: 0px;
+    }
+}
+
+.option img:hover {
+    transition: 0.4s;
+    background-color: white;
+    animation-name: floating;
+    animation-duration: 3s;
+    animation-iteration-count: infinite;
+}
+
+.option img:active {
+    border-color: #3edb17;
+}
+#results {
+    text-align: center;
+    font-size: 2em;
+    text-shadow: 1px 1px 2px rgb(255, 242, 242);
+}
+
+#scores {
+    margin: 50px auto;
+    width: 100%;
+    text-align: center;
+    color: #C5C6C7;
+    font-size: 20px;
+}
+
+#scores > span {
+    font-size: 10vh;
+    text-align: center;
+    border-bottom: solid 3px rgb(100, 94, 81);
+    width: 20%;
+    margin: auto;
+}
+
+span {
+    display: inline-block;
+}
+
+sub {
+    font-size: 16px;
+}
+
+@media only screen and (max-width:632px) {
+    header {
+        font-size: 2em;
+    }
+
+    header > p {
+        padding-top: 10px;
+    }
+
+    #options {
+        width: 100%;
+    }
+}
+
+@media only screen and (max-width: 1130px) {
+    #options {
+        width: 100%;
+    }
+}
+
+@media only screen and (max-width: 449px) {
+    #instructions {
+        width: 100%;
+        font-size: 12px;
+    }
+
+    header {
+        font-size: 1.5em;
+        padding-top: 5px;
+    }
+}
+
+@media only screen and (max-width: 336px) {
+    header {
+        height: 80px;
+    }
+    
+    .option {
+        width: 100%;
+        margin: 5px 102px;
+    }
+
+    .option img {
+        width: 30%;
+    }
+}
+
+@media only screen and (max-width: 320px) {
+    #instructions > p {
+        margin: 0;
+    }
+
+    #scores {
+        margin: 0;
+    }
+}
