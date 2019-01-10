@@ -59,6 +59,7 @@ function endGame(userChoice, computerChoice) {
 
 function game(userChoice) {
     const computerChoice = getComputerChoice();
+    endGame(userChoice, computerChoice);
     switch(userChoice + computerChoice) {
         case "rs":
         case "pr":
