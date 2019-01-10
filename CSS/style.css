@@ -2,13 +2,13 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    -khtml-user-select: none;
     -moz-user-select: none;
     -webkit-user-select: none;
     -ms-user-select:none;
     user-select:none;
     -o-user-select:none;
 }
-
 body {
     font-family: 'Roboto Condensed', sans-serif;
     background-color: #1A1A1D;
@@ -56,7 +56,6 @@ header {
     width: 26%;
     float: left;
     margin: 55px 3.66666%;
-    cursor: pointer;
 }
 
 .option img {
@@ -65,7 +64,8 @@ header {
     border-radius: 50%;
     border: solid 5px black;
     background-color: rgb(201, 46, 46);
-    background-clip: content-box;
+    cursor: pointer;
+    -webkit-tap-highlight-color: transparent; /* for remove highlight */
 }
 
 @keyframes floating {
@@ -95,12 +95,15 @@ header {
 }
 
 .option img:active {
-    border-color: #3edb17;
+    border-color: #33ff00;
+    border-width: 1px;
+    background-color: rgb(255, 187, 0);
 }
 #results {
     text-align: center;
     font-size: 2em;
     text-shadow: 1px 1px 2px rgb(255, 242, 242);
+    margin-bottom: 40px;
 }
 
 #scores {
@@ -159,16 +162,6 @@ sub {
     }
 }
 
-@media only screen and (max-width: 414px) {
-    header {
-        font-size: 1.4em;
-    }
-
-    #results {
-        font-size: 20px;
-    }
-}
-
 @media only screen and (max-width: 336px) {
     header {
         height: 80px;
@@ -191,5 +184,15 @@ sub {
 
     #scores {
         margin: 0;
+    }
+}
+
+@media only screen and (max-width: 414px) {
+    header {
+        font-size: 1.4em;
+    }
+
+    #results {
+        font-size: 20px;
     }
 }
