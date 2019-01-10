@@ -153,6 +153,12 @@ sub {
     }
 }
 
+@media only screen and (max-width: 375px) {
+    header {
+        font-size: 1.4em;
+    }
+}
+
 @media only screen and (max-width: 336px) {
     header {
         height: 80px;
