@@ -91,7 +91,7 @@ header {
     background-color: white;
     animation-name: floating;
     animation-duration: 3s;
-    animation-iteration-count: infinite;
+    animation-iteration-count: 1;
 }
 
 .option img:active {
