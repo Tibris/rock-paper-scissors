@@ -43,6 +43,20 @@ function draw(userChoice, computerChoice) {
     result.innerHTML = convertToWord(userChoice) + " vs " + convertToWord(computerChoice) + ". Draw!";
 }
 
+function endGame(userChoice, computerChoice) {
+    playerScore_span.innerHTML = userScore;
+    computerScore_span.innerHTML = computerScore;
+    if(userScore > 14) {
+        alert("Game over! Player wins!");
+        userScore = 0;
+        computerScore = 0;
+    }else if(computerScore > 14) {
+        alert("Game over! Computer wins!");
+        userScore = 0;
+        computerScore = 0;
+    }
+}
+
 function game(userChoice) {
     const computerChoice = getComputerChoice();
     switch(userChoice + computerChoice) {
