@@ -44,16 +44,12 @@ function draw(userChoice, computerChoice) {
 }
 
 function endGame(userChoice, computerChoice) {
-    playerScore_span.innerHTML = userScore;
-    computerScore_span.innerHTML = computerScore;
-    if(userScore > 14) {
+    if(userScore == 15) {
         alert("Game over! Player wins!");
-        userScore = 0;
-        computerScore = 0;
-    }else if(computerScore > 14) {
+        location.reload();
+    }else if(computerScore == 15) {
         alert("Game over! Computer wins!");
-        userScore = 0;
-        computerScore = 0;
+        location.reload();
     }
 }
 
